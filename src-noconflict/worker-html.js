@@ -1618,7 +1618,8 @@ EntityParser.consumeEntity = function(buffer, tokenizer, additionalAllowedCharac
 			consumedCharacters += ch;
 		}
 		if (!mostRecentMatch) {
-			tokenizer._parseError("expected-named-entity");
+      // ref: https://app.asana.com/0/0/1203575735032831/1203614847244709/f
+			// tokenizer._parseError("expected-named-entity");
 			buffer.unget(consumedCharacters);
 			return false;
 		}
